@@ -1,0 +1,16 @@
+{
+"companyName": "DefaultCompany",
+"productName": "Tetris",
+"productVersion": "0.1",
+"dataUrl": "1weekTetris.data.unityweb",
+"wasmCodeUrl": "1weekTetris.wasm.code.unityweb",
+"wasmFrameworkUrl": "1weekTetris.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.2.0f1"
+}
