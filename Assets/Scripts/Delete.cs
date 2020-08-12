@@ -37,6 +37,7 @@ public class Delete : MonoBehaviour {
     gameObject.SetActive(false);
     b.gameObject.SetActive(true);
     b.Next();
+    SoundManager.Instance.PlaySeByName(Define.DELETE);
   }
   internal void All() {
     for (int y = b.minY; y < b.maxY; y++) {

@@ -114,6 +114,10 @@ public class Board : MonoBehaviour {
     XY[] r = Blocks.Relatives(s);
     if (!IsEmpty(s.x, s.y, r)) {
       s.rotate = cr; // rollback
+      SoundManager.Instance.PlaySeByName(Define.NOTROTATE);
+    }
+    else {
+      SoundManager.Instance.PlaySeByName(Define.ROTATE);
     }
     Fix();
   }
@@ -140,6 +144,7 @@ public class Board : MonoBehaviour {
     //-> dropped. no space to move.
     hold.used = false;
     del.Check();
+    SoundManager.Instance.PlaySeByName(Define.DROP);
   }
   internal void Render() {
     for (int y = minY; y < maxY; y++) {
