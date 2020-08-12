@@ -1,10 +1,93 @@
-Unity 2D で制作したテトリスです。
+# 目次
+<!-- TOC -->
 
-### 画面イメージ
-[![Tetris](https://img.youtube.com/vi/LeKO05yuzxo/0.jpg)](https://www.youtube.com/watch?v=LeKO05yuzxo)
+- [操作方法](#操作方法)
+- [デモ](#デモ)
+- [開発環境](#開発環境)
+- [使用アセット](#使用アセット)
+  - [ユーザーデータ管理(必須)](#ユーザーデータ管理必須)
+  - [ランキング(必須)](#ランキング必須)
+  - [WebGL日本語入力(任意)](#webgl日本語入力任意)
+  - [WebGL画面サイズ自動調整(任意)](#webgl画面サイズ自動調整任意)
+  - [バージョン管理(任意)](#バージョン管理任意)
+- [追加実装部](#追加実装部)
+- [ハマったバグ](#ハマったバグ)
+  - [ゴーストの回転軸が歯抜け](#ゴーストの回転軸が歯抜け)
+  - [ゴーストがブロックを消していく](#ゴーストがブロックを消していく)
+- [参考リンク](#参考リンク)
+  - [実装](#実装)
+  - [素材](#素材)
+- [メモ](#メモ)
+  - [未実装](#未実装)
 
-### 参考文献
-- [テトリスを1時間強で作ってみた【実況解説】- ニコニコ動画](https://www.nicovideo.jp/watch/sm8517855)
-- [C言語テトリスのソースコードを読む - はてなブログ](http://itouhiro.hatenablog.com/entry/20121119/tetris)
-- [実況解説動画のソースコード - GitHub](https://github.com/DQNEO/CppTetris)
-- [テトリス - Wikipedia](https://ja.wikipedia.org/wiki/%E3%83%86%E3%83%88%E3%83%AA%E3%82%B9)
+<!-- /TOC -->
+
+# 操作方法
+- 上：ハードドロップ
+- 左右：左右移動
+- 下：落下スピードUP
+- Enter：回転, 決定
+- Space：ホールド
+
+# デモ
+[テトリス](https://little-hoge.github.io/tetris/)  
+[![main](https://user-images.githubusercontent.com/3638785/90015586-c3453100-dce3-11ea-959d-6de3a24d19ee.gif)](https://little-hoge.github.io/tetris/)
+
+# 開発環境
+- Windows10 64bit
+- unity2019.2.0f1  unity日本語化(https://www.sejuku.net/blog/56333)
+- Visual C# 2019
+
+# 使用アセット
+#### ユーザーデータ管理(必須)
+- NCMB v4.0.4(https://github.com/NIFCLOUD-mbaas/ncmb_unity/releases) \
+※登録(https://console.mbaas.nifcloud.com/)
+
+#### ランキング(必須)
+- unity-simple-ranking v2.2(https://github.com/naichilab/unity-simple-ranking)
+
+#### WebGL日本語入力(任意)
+- WebGLInput(https://github.com/kou-yeung/WebGLInput) \
+※unity-simple-ranking日本語入力対応  
+
+#### WebGL画面サイズ自動調整(任意)
+- WebGL responsive template(https://github.com/miguel12345/UnityWebglResponsiveTemplate) \
+※WebGLに対応する場合便利  
+
+#### バージョン管理(任意)
+- Github for Unity(https://miyagame.net/github-for-unity/) \
+※登録(https://github.com/) \
+※使い方(https://qiita.com/toRisouP/items/97c4cddcb735acde2f03)
+
+# 追加実装部
+- WebGL出力
+- SE
+- ゴースト
+- ハードドロップ
+- ランキング
+- ふえる
+
+# ハマったバグ
+#### ゴーストの回転軸が歯抜け  
+<img src="https://user-images.githubusercontent.com/3638785/90013347-0d2c1800-dce0-11ea-88fe-b111bc047c99.gif" width="200" >  
+
+#### ゴーストがブロックを消していく
+<img src="https://user-images.githubusercontent.com/3638785/90013343-0bfaeb00-dce0-11ea-8078-cac88cd8cd88.gif" width="200" >
+
+# 参考リンク
+#### 実装
+- Unity 2D：テトリスの開発  
+https://web-dev.hatenablog.com/entry/unity/2d/tetris/overview  
+https://github.com/mamorum/tetris
+
+#### 素材
+- Google Fonts  
+https://fonts.google.com/
+
+- SoundManagerのC#スクリプト  
+https://00m.in/Lp0Up
+
+# メモ
+#### 未実装
+- 落下速度変更
+- 各スピン判定(Tスピン等)
