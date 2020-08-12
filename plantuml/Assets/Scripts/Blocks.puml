@@ -1,0 +1,9 @@
+@startuml
+class XY {
+}
+class Blocks {
+    {static} XY(x:int, y:int) : XY
+    {static} XYs(p1:XY, p2:XY, p3:XY) : XY[]
+}
+MonoBehaviour <|-- Blocks
+@enduml

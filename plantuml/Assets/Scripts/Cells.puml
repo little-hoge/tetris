@@ -1,0 +1,14 @@
+@startuml
+class Cells {
+    Back(x:float, y:float) : Cell
+    Empty(x:float, y:float) : Cell
+    Wall(x:float, y:float) : Cell
+    Create(id:int, x:float, y:float, clr:Color) : Cell
+}
+class "List`1"<T> {
+}
+MonoBehaviour <|-- Cells
+Cells --> "prfbCell" GameObject
+Cells o-> "cells<GameObject>" "List`1"
+Cells --> "c" Controller
+@enduml

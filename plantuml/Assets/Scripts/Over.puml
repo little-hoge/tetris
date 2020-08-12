@@ -1,0 +1,20 @@
+@startuml
+class Over {
+    focus : int
+    frm : int
+    delay : bool
+    Update() : void
+    Delay() : void
+    EndDelay() : void
+    Restart() : void
+    TitleAlpha(a:float) : void
+    Focus(next:int) : void
+    Font(txt:Text, to:int) : void
+}
+MonoBehaviour <|-- Over
+Over --> "title" Text
+Over --> "tColor" Color
+Over o-> "tCenter" Vector3
+Over o-> "tUp" Vector3
+Over --> "c" Controller
+@enduml

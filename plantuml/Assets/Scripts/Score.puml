@@ -1,0 +1,10 @@
+@startuml
+class Score {
+    line : int
+    score : int
+    Render() : void
+}
+MonoBehaviour <|-- Score
+Score --> "txtLine" Text
+Score --> "txtScore" Text
+@enduml

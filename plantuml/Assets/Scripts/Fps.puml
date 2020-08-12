@@ -1,0 +1,10 @@
+@startuml
+class Fps {
+    frm : int = 0
+    sec : float = 0
+    fps : float = 0
+    Update() : void
+}
+MonoBehaviour <|-- Fps
+Fps --> "txt" Text
+@enduml

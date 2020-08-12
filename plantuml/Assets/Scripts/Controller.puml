@@ -1,0 +1,15 @@
+@startuml
+class Controller {
+    Start() : void
+}
+MonoBehaviour <|-- Controller
+Controller --> "fps" Fps
+Controller --> "cam" Camera
+Controller --> "canvas" Canvas
+Controller --> "colors" Colors
+Controller --> "cells" Cells
+Controller --> "board" Board
+Controller --> "score" Score
+Controller --> "over" Over
+Controller --> "ready" Ready
+@enduml

@@ -1,0 +1,20 @@
+@startuml
+class Board {
+    drop : int = 60
+    fast : int = 20
+    insert : bool
+    frm : int
+    ResetVariables() : void
+    Update() : void
+    Insert() : void
+    Fix() : void
+    Hide() : void
+    IsEmpty(x:int, y:int, r:XY[]) : bool
+}
+MonoBehaviour <|-- Board
+Board --> "del" Delete
+Board --> "c" Controller
+Board o-> "s" Status
+Board o-> "next" Next
+Board o-> "hold" Hold
+@enduml

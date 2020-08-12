@@ -1,0 +1,6 @@
+@startuml
+class Cell {
+}
+Cell --> "sr" SpriteRenderer
+Cell --> "colors" Colors
+@enduml

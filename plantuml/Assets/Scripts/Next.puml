@@ -1,0 +1,13 @@
+@startuml
+class Next {
+    swap : int
+    count : int
+    show : bool
+    CreateQueue() : void
+    Shuffle(from:int[], to:Status[]) : void
+    Dequeue(queue:Status[]) : int
+    Enqueue(i:int, queue:Status[]) : void
+    Show() : void
+}
+Next --> "c" Controller
+@enduml

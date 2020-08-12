@@ -1,0 +1,28 @@
+@startuml
+class SoundManager {
+    volume : float = 1
+    bgmVolume : float = 1
+    seVolume : float = 1
+    + Volume : float <<set>> <<get>>
+    + BgmVolume : float <<set>> <<get>>
+    + SeVolume : float <<set>> <<get>>
+    + Awake() : void
+    + GetBgmIndex(name:string) : int
+    + GetSeIndex(name:string) : int
+    + PlayBgm(index:int) : void
+    + PlayBgmByName(name:string) : void
+    + StopBgm() : void
+    + PlaySe(index:int) : void
+    + PlaySeByName(name:string) : void
+    + StopSe() : void
+}
+class "SingletonMonoBehaviour`1"<T> {
+}
+class "Dictionary`2"<T1,T2> {
+}
+"SingletonMonoBehaviour`1" "<SoundManager>" <|-- SoundManager
+SoundManager o-> "bgmIndex<string,int>" "Dictionary`2"
+SoundManager o-> "seIndex<string,int>" "Dictionary`2"
+SoundManager --> "bgmAudioSource" AudioSource
+SoundManager --> "seAudioSource" AudioSource
+@enduml

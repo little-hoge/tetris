@@ -1,0 +1,16 @@
+@startuml
+class Delete {
+    frm : int
+    delete : int = 30
+    Update() : void
+    Deleting() : void
+    Complete() : void
+    Enable() : void
+}
+class "List`1"<T> {
+}
+MonoBehaviour <|-- Delete
+Delete --> "c" Controller
+Delete --> "b" Board
+Delete o-> "lines<int>" "List`1"
+@enduml

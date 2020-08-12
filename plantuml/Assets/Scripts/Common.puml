@@ -1,0 +1,22 @@
+@startuml
+class Common {
+}
+class GameInitial {
+    {static} OnRuntimeMethodLoad() : void
+}
+class Define <<static>> {
+    + <<const>> DELETE : string
+    + <<const>> DROP : string
+    + <<const>> ROTATE : string
+    + <<const>> NOTROTATE : string
+    + <<const>> SCREEN_X : int
+    + <<const>> SCREEN_Y : int
+    + <<const>> FPS : int
+}
+class Function <<static>> {
+}
+class Data {
+}
+MonoBehaviour <|-- Common
+Data o-> "Instance" Data
+@enduml

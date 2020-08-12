@@ -1,0 +1,14 @@
+@startuml
+class Colors {
+}
+MonoBehaviour <|-- Colors
+Colors --> "empty" Color
+Colors --> "wall" Color
+Colors --> "i" Color
+Colors --> "o" Color
+Colors --> "s" Color
+Colors --> "z" Color
+Colors --> "j" Color
+Colors --> "l" Color
+Colors --> "t" Color
+@enduml

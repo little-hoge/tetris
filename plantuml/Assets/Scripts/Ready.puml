@@ -1,0 +1,10 @@
+@startuml
+class Ready {
+    frm : int
+    ready : string
+    Update() : void
+}
+MonoBehaviour <|-- Ready
+Ready --> "txt" Text
+Ready --> "c" Controller
+@enduml

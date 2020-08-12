@@ -1,0 +1,6 @@
+@startuml
+class Key {
+    {static} LeftRightKeys() : bool
+    {static} UpDownKeys() : bool
+}
+@enduml
