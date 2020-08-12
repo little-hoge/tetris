@@ -286,7 +286,8 @@ PlayerSettings:
   openGLRequireES31AEP: 0
   openGLRequireES32: 0
   vuforiaEnabled: 0
-  m_TemplateCustomTags: {}
+  m_TemplateCustomTags:
+    ASPECT_RATIO: 9:16
   mobileMTRendering:
     Android: 1
     iPhone: 1
@@ -512,7 +513,7 @@ PlayerSettings:
   webGLDebugSymbols: 0
   webGLEmscriptenArgs: 
   webGLModulesDirectory: 
-  webGLTemplate: APPLICATION:Default
+  webGLTemplate: PROJECT:Responsive
   webGLAnalyzeBuildSize: 0
   webGLUseEmbeddedResources: 0
   webGLCompressionFormat: 1

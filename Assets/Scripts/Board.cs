@@ -63,6 +63,7 @@ public class Board : MonoBehaviour {
     if (IsEmpty(s.x, s.y, r)) return;
     gameObject.SetActive(false);
     c.over.Enable(); // game over
+    naichilab.RankingLoader.Instance.SendScoreAndShowRanking(int.Parse(c.score.txtScore.text));
   }
   void Fix() {
     cells[s.x, s.y].id = s.id;
