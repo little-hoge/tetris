@@ -12,6 +12,8 @@ public class Board : MonoBehaviour {
   Hold hold = new Hold();
   int drop = 60, fast = 20;
   bool insert; int frm;
+  internal int ghostY = 0;
+
   internal void Init(Controller ct) {
     c = ct; cells = c.cells.main;
     maxX = cells.GetLength(0) - 1;
@@ -34,7 +36,9 @@ public class Board : MonoBehaviour {
     frm++;
     HandleInput();
     if (frm >= drop) Drop();
+    Ghost(true);
     Render();
+    Ghost(false);
   }
   internal void HandleInput() {
     Key.Handle();
@@ -47,6 +51,7 @@ public class Board : MonoBehaviour {
     else if (Key.Right()) Move(1, 0);
     if (Key.Hold()) Hold();
     else if (Key.Rotate()) Rotate();
+    if (Key.Up()) HardDrop();
   }
   void Insert() {
     s.XY(5, 20); // first place
@@ -141,6 +146,40 @@ public class Board : MonoBehaviour {
       for (int x = minX; x < maxX; x++) {
         cells[x, y].Render();
       }
+    }
+  }
+  internal void Ghost(bool flag) {
+    int cx, cy;
+    XY[] r = Blocks.Relatives(s);
+
+    Hide();
+
+    if (!flag) {
+      cells[s.x, s.y + ghostY].id = Blocks.empty;
+      for (int i = 0; i < r.Length; i++) {
+        cx = r[i].x; cy = r[i].y + ghostY;
+        cells[s.x + cx, s.y + cy].id = Blocks.empty;
+      }
+    }
+    else {
+      ghostY = 0;
+      while (IsEmpty(s.x, s.y + ghostY, r)) {
+        ghostY--;
+      }
+      ghostY++;
+
+      cells[s.x, s.y + ghostY].id = s.id;
+      for (int i = 0; i < r.Length; i++) {
+        cx = r[i].x; cy = r[i].y + ghostY;
+        cells[s.x + cx, s.y + cy].id = s.id;
+      }
+    }
+    Fix();
+  }
+
+  internal void HardDrop() {
+    for (int y = ghostY; y <= 0; y++) {
+      Drop();
     }
   }
 }
