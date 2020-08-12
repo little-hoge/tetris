@@ -33,6 +33,7 @@ public class Delete : MonoBehaviour {
     }
     frm = 0;
     lines.Clear();
+    b.BlockUp(); // ふえる要素…
     gameObject.SetActive(false);
     b.gameObject.SetActive(true);
     b.Next();

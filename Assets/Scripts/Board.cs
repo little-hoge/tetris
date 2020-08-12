@@ -182,4 +182,13 @@ public class Board : MonoBehaviour {
       Drop();
     }
   }
+
+  internal void BlockUp() {
+    for (int y = maxY; y > minY; y--) {
+      for (int x = minX; x < maxX; x++) {
+        cells[x, y].id = cells[x, y - 1].id;
+        if (y == minY + 1) cells[x, y - 1].id = Blocks.empty;
+      }
+    }
+  }
 }
