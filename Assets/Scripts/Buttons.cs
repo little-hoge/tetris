@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Buttons : MonoBehaviour {
   Controller c; Board b;
-  public GameObject Over, Restart;
+  public GameObject Over, Restart, Delete;
   public GameObject Up, Down, Left, Right;
   public GameObject Hold, Rotate;
 
@@ -26,24 +26,21 @@ public class Buttons : MonoBehaviour {
     c = ct; b = c.board;
   }
   public void OnClickUp() {
-    b.HardDrop();
+    if (!Delete.activeSelf) b.HardDrop();
   }
   public void OnClickDown() {
-    b.Drop();
+    if (!Delete.activeSelf) b.Drop();
   }
   public void OnClickLeft() {
-    b.Move(-1, 0);
+    if (!Delete.activeSelf) b.Move(-1, 0);
   }
-
   public void OnClickRight() {
-    b.Move(1, 0);
+    if (!Delete.activeSelf) b.Move(1, 0);
   }
-
   public void OnClickHold() {
-    b.Hold();
+    if (!Delete.activeSelf) b.Hold();
   }
   public void OnClickRotate() {
-    b.Rotate();
+    if (!Delete.activeSelf) b.Rotate();
   }
-
 }
