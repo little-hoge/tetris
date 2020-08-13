@@ -68,6 +68,7 @@
 - ランキング
 - ふえる
 - [Plantuml](https://github.com/little-hoge/tetris/tree/master/plantuml)
+- 操作用釦
 
 # ハマったバグ
 #### ゴーストの回転軸が歯抜け  
@@ -75,6 +76,9 @@
 
 #### ゴーストがブロックを消していく
 <img src="https://user-images.githubusercontent.com/3638785/90013343-0bfaeb00-dce0-11ea-8078-cac88cd8cd88.gif" width="200" >
+
+#### 消去中ハードドロップでハング
+<img src="https://user-images.githubusercontent.com/3638785/90106430-5d5bb680-dd82-11ea-8746-45fb37804920.gif" width="200" >
 
 # 参考リンク
 #### 実装
