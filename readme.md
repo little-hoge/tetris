@@ -34,6 +34,9 @@
 [テトリス](https://little-hoge.github.io/tetris/)  
 [![main](https://user-images.githubusercontent.com/3638785/90015586-c3453100-dce3-11ea-959d-6de3a24d19ee.gif)](https://little-hoge.github.io/tetris/)
 
+#### Android版
+[Tetris_v1.1.apk](https://github.com/little-hoge/tetris/releases/download/v1.1/Tetris.apk)
+
 # 開発環境
 - Windows10 64bit
 - unity2019.2.0f1  unity日本語化(https://www.sejuku.net/blog/56333)
