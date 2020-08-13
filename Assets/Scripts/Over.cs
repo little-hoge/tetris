@@ -54,7 +54,7 @@ public class Over : MonoBehaviour {
     menu[0].gameObject.SetActive(true);
     menu[1].gameObject.SetActive(true);
   }
-  void Restart() {
+  public void Restart() {
     gameObject.SetActive(false);
     c.Restart();
   }

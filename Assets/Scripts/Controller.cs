@@ -7,8 +7,9 @@ public class Controller : MonoBehaviour {
   public Camera cam; public Canvas canvas;
   public Colors colors; public Cells cells;
   public Board board; public Score score;
-  public Over over; public Ready ready;  
-  void Start() {
+  public Over over; public Ready ready;
+  public Buttons buttons;
+ void Start() {
     fps.Init();
     colors.Init(this); cells.Init(this);
     board.Init(this); over.Init(this);

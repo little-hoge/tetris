@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Board : MonoBehaviour {
-  public Delete del;
+  public Delete del; public Buttons bots;
   internal Cell[,] cells; Controller c;
   internal int //-> range of inside wall
     minX = 1, maxX, minY = 1, maxY;
@@ -18,7 +18,7 @@ public class Board : MonoBehaviour {
     c = ct; cells = c.cells.main;
     maxX = cells.GetLength(0) - 1;
     maxY = cells.GetLength(1) - 2;
-    del.Init(c); next.Init(c); hold.Init(c);
+    del.Init(c); next.Init(c); hold.Init(c); bots.Init(c);
     ResetVariables();
     Next();
   }
@@ -52,6 +52,7 @@ public class Board : MonoBehaviour {
     if (Key.Hold()) Hold();
     else if (Key.Rotate()) Rotate();
     if (Key.Up()) HardDrop();
+
   }
   void Insert() {
     s.XY(5, 20); // first place
