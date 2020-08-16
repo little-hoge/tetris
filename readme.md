@@ -41,7 +41,7 @@
 [Tetris_v1.1.apk](https://github.com/little-hoge/tetris/releases/download/v1.1/Tetris.apk)
 
 #### Unity1週間ゲームジャムお題「ふえる」
-[unity1week_202008100](https://unityroom.com/games/1weektetris/settings/blogs)
+[unity1week_202008100](https://unityroom.com/games/1weektetris)
 
 # 開発環境
 - Windows10 64bit
